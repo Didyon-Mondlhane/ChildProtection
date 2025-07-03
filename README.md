@@ -1,61 +1,81 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🧒 ChildProtection Comparator Laravel
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Aplicação web desenvolvida com **Laravel 12** para classificar e comparar a situação de protecção infantil em diferentes países, com foco em actividades laborais perigosas para crianças. Interface moderna com Bootstrap 5, exportação de dados, paginação customizada e validação de dados integrada.
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 🛠️ Tecnologias Utilizadas
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- **PHP 8.2**
+- **Laravel 12.19.3**
+- Composer 2.8.6
+- Blade (motor de templates Laravel)
+- Bootstrap 5 (via Vite)
+- Sass (pré-processador CSS)
+- MySQL
+- Eloquent ORM
+- Laravel Pagination
+- Laravel Excel (Maatwebsite)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## Learning Laravel
+## 🚀 Funcionalidades Principais
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### 🌍 Comparação Internacional
+- Comparar protecção infantil entre países
+- Exportar relatórios em PDF
+- Visualizar dados por actividade e sector
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+### 🗂️ Gestão de Entidades
+- **Países**: adicionar, editar, visualizar e eliminar
+- **Actividades Proibidas**: gerir lista de trabalhos perigosos
+- **Sectores**: definir áreas de actividade económica
+- **Actividades por País**: associar dados por país e sector
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### 🎨 Interface Moderna
+- Layout escuro com Bootstrap 5
+- Paginação customizada
+- Formulários com validações e mensagens de erro claras
 
-## Laravel Sponsors
+---
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## 📂 Estrutura de Rotas
 
-### Premium Partners
+| Método   | Rota                                | Descrição                                      |
+|----------|-------------------------------------|-----------------------------------------------|
+| GET      | `/`                                 | Página inicial                                 |
+| GET      | `/comparisons`                      | Listar comparações                             |
+| GET      | `/comparisons/{id}`                 | Ver detalhes de comparação                     |
+| GET      | `/exports/pdf`                      | Exportar relatório em PDF                      |
+| GET      | `/countries`                        | Listar países                                  |
+| GET      | `/countries/create`                 | Formulário de novo país                        |
+| POST     | `/countries`                        | Guardar novo país                              |
+| GET      | `/countries/{id}`                   | Ver detalhes do país                           |
+| GET      | `/countries/{id}/edit`              | Editar país                                    |
+| PUT      | `/countries/{id}`                   | Actualizar país                                |
+| DELETE   | `/countries/{id}`                   | Eliminar país                                  |
+| GET      | `/prohibited-activities`            | Listar actividades proibidas                   |
+| GET      | `/prohibited-activities/create`     | Formulário de nova actividade proibida         |
+| POST     | `/prohibited-activities`            | Guardar actividade proibida                    |
+| GET      | `/prohibited-activities/{id}`       | Ver actividade proibida                        |
+| GET      | `/prohibited-activities/{id}/edit`  | Editar actividade proibida                     |
+| PUT      | `/prohibited-activities/{id}`       | Actualizar actividade proibida                 |
+| DELETE   | `/prohibited-activities/{id}`       | Eliminar actividade proibida                   |
+| GET      | `/sectors`                          | Listar sectores                                |
+| GET      | `/sectors/create`                   | Formulário de novo sector                      |
+| POST     | `/sectors`                          | Guardar novo sector                            |
+| GET      | `/sectors/{id}`                     | Ver sector                                     |
+| GET      | `/sectors/{id}/edit`                | Editar sector                                  |
+| PUT      | `/sectors/{id}`                     | Actualizar sector                              |
+| DELETE   | `/sectors/{id}`                     | Eliminar sector                                |
+| GET      | `/country-activities`               | Listar actividades por país                    |
+| GET      | `/country-activities/create`        | Formulário de nova associação país-actividade  |
+| POST     | `/country-activities`               | Guardar associação país-actividade             |
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+---
 
-## Contributing
+## ✅ Validação de Dados
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+- `country_name`: obrigatório, texto entre 2 e 255 caracteres
+- `sector_name`: obrigatório, único por país
+- `activity_description`: obrigatório, mínimo 3 caracteres
