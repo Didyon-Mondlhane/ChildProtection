@@ -71,11 +71,3 @@ Aplicação web desenvolvida com **Laravel 12** para classificar e comparar a si
 | GET      | `/country-activities`               | Listar actividades por país                    |
 | GET      | `/country-activities/create`        | Formulário de nova associação país-actividade  |
 | POST     | `/country-activities`               | Guardar associação país-actividade             |
-
----
-
-## ✅ Validação de Dados
-
-- `country_name`: obrigatório, texto entre 2 e 255 caracteres
-- `sector_name`: obrigatório, único por país
-- `activity_description`: obrigatório, mínimo 3 caracteres
