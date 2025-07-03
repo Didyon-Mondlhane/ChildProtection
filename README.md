@@ -1,4 +1,4 @@
-# 🧒 ChildProtection Comparator Laravel
+# 🧒 ChildProtection Comparator
 
 Aplicação web desenvolvida com **Laravel 12** para classificar e comparar a situação de protecção infantil em diferentes países, com foco em actividades laborais perigosas para crianças. Interface moderna com Bootstrap 5, exportação de dados, paginação customizada e validação de dados integrada.
 
