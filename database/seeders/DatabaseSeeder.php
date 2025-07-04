@@ -12,7 +12,6 @@ class DatabaseSeeder extends Seeder
             SectorSeeder::class,
             ProhibitedActivitySeeder::class,
             CountrySeeder::class,
-            CountryClassificationSeeder::class,
             CountryActivitySeeder::class,
         ]);
     }
