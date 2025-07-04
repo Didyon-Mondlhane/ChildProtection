@@ -167,7 +167,7 @@
                 <div class="stat-item"><strong>Convenções OIT:</strong> {{ $comparison->country1->ilo_conventions ?? 'N/A' }}</div>
                 <div class="stat-item"><strong>Ano lista actividades:</strong> {{ $comparison->country1->prohibited_year ?? 'N/A' }}</div>
                 <div class="stat-item"><strong>Legislação SST:</strong> {{ $comparison->country1->sst_legislation ?? 'N/A' }}</div>
-                <div class="stat-item"><strong>Escolaridade média:</strong> {{ $comparison->country1->schooling_years ?? 'N/A' }} anos</div>
+                <div class="stat-item"><strong>Nível de Escolaridade:</strong> {{ $comparison->country1->schooling_years ?? 'N/A' }} </div>
             </div>
             <p><strong>Actividades Proibidas:</strong> {{ $comparison->country1->activities->count() }}</p>
             <p><strong>Sectores económicos principais:</strong> {{ $comparison->country1->main_sectors ?? 'N/A' }}</p>
@@ -183,7 +183,7 @@
                 <div class="stat-item"><strong>Convenções OIT:</strong> {{ $comparison->country2->ilo_conventions ?? 'N/A' }}</div>
                 <div class="stat-item"><strong>Ano lista actividades:</strong> {{ $comparison->country2->prohibited_year ?? 'N/A' }}</div>
                 <div class="stat-item"><strong>Legislação SST:</strong> {{ $comparison->country2->sst_legislation ?? 'N/A' }}</div>
-                <div class="stat-item"><strong>Escolaridade média:</strong> {{ $comparison->country2->schooling_years ?? 'N/A' }} anos</div>
+                <div class="stat-item"><strong>Nível de Escolaridade:</strong> {{ $comparison->country2->schooling_years ?? 'N/A' }} </div>
             </div>
             <p><strong>Actividades Proibidas:</strong> {{ $comparison->country2->activities->count() }}</p>
             <p><strong>Sectores económicos principais:</strong> {{ $comparison->country2->main_sectors ?? 'N/A' }}</p>
@@ -203,12 +203,6 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>Nível de Protecção Infantil</td>
-                    <td>{{ $comparison->country1->child_protection_level ?? 'N/A' }}</td>
-                    <td>{{ $comparison->country2->child_protection_level ?? 'N/A' }}</td>
-                    <td>Baseado em convenções OIT e legislação local</td>
-                </tr>
-                <tr>
                     <td>Actividades Proibidas</td>
                     <td>{{ $comparison->country1->activities->count() }}</td>
                     <td>{{ $comparison->country2->activities->count() }}</td>
@@ -219,12 +213,6 @@
                     <td>{{ $comparison->country1->ilo_conventions ?? 'N/A' }}</td>
                     <td>{{ $comparison->country2->ilo_conventions ?? 'N/A' }}</td>
                     <td>Número de convenções sobre trabalho infantil</td>
-                </tr>
-                <tr>
-                    <td>Força da Legislação</td>
-                    <td>{{ $comparison->country1->sst_legislation_strength ?? 'N/A' }}</td>
-                    <td>{{ $comparison->country2->sst_legislation_strength ?? 'N/A' }}</td>
-                    <td>Avaliação da robustez da legislação (1-5)</td>
                 </tr>
             </tbody>
         </table>
